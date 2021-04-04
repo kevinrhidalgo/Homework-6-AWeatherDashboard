@@ -1,0 +1,105 @@
+section{
+    background-color: lightblue;
+    flex-wrap: wrap;
+}
+
+
+.forecast-day {
+    background-color:navy;
+    color: whitesmoke;
+    width: 100px;
+    height: 150px;
+    font-size: 20px;
+    padding: 10px 40px 40px 40px;
+    
+    
+}
+
+.navbar {
+    margin-right: 0;
+    background-color: navy;
+    color: white;
+   display: flex;
+   justify-content: center;
+   border: navy solid 20px;
+
+}
+
+.current-box {
+    margin-right: 10px;
+    background-color: green;
+}
+
+input {
+    margin-left: 5px;
+}
+
+button {
+    background-color: navy;
+    border: 2px solid cornflowerblue;
+    color: whitesmoke;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+button:active {
+    background-color: lightblue;
+}
+
+button:hover {
+    background-color: darkcyan;
+    border: 2px solid;
+}
+
+
+
+.clear {
+    background-color: burlywood;
+    border: 2px solid brown;
+   
+}
+.mt-1{
+    display: flex;
+    flex-direction: column;   
+}
+.three{
+    border: navy solid 15px;
+    padding-left:20px ;
+    width: 200px;
+}
+
+
+.forecastDashboard{
+    width: 200px;
+    margin: 40px;
+    display: inline;
+
+    
+    
+}
+
+.forecastList
+{
+    display: flex;
+flex-direction: row; 
+    justify-content: space-between;
+    
+}
+
+
+.search{
+    display: flex;
+}
+
+.container{
+    border: darkblue solid 15px;
+
+   
+}
+
+.one img{
+    display: flex;
+    justify-content: flex-end;
+}

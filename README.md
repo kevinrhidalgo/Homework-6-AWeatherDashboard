@@ -4,7 +4,7 @@ Homework# 06 Server-Side APIs: Creating a Weather Dashboard
 
 For this homework we will be focusing on Third-party APIs. The purpose of this is to learn how developers allow their data and functionality to be accessed by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS. We will be using the Openwaether one call API (https://openweathermap.org/api/one-call-api) to retrieve the necessary data to complete this homework. 
 
-url: 
+url: https://kevinrhidalgo.github.io/Homework-6-AWeatherDashboard/
 
 <img src="SS.jpg">
 

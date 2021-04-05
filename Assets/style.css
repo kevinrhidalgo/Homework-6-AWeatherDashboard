@@ -1,27 +1,40 @@
+body{
+    background-color:teal;
+}
+
+
 section{
     background-color: lightblue;
     flex-wrap: wrap;
 }
 
 
-.forecast-day {
-    background-color:navy;
-    color: whitesmoke;
-    width: 100px;
-    height: 150px;
-    font-size: 20px;
-    padding: 10px 40px 40px 40px;
-    
-    
+
+#fiveDay{
+    display: flex;
+    justify-content: center;
+    float: center;
+    font-size: 30px;
+    background-color:teal;
+    color:white;
 }
 
+article{
+    background-color: lightgray;
+  flex-wrap: inline;
+ align-items: center;
+
+}
 .navbar {
     margin-right: 0;
-    background-color: navy;
+    background-color: #02bec1;
     color: white;
    display: flex;
    justify-content: center;
-   border: navy solid 20px;
+   
+   height: 250px;
+   font-size: 50px;
+ 
 
 }
 
@@ -35,7 +48,7 @@ input {
 }
 
 button {
-    background-color: navy;
+    background-color:  #02e6e9;
     border: 2px solid cornflowerblue;
     color: whitesmoke;
     padding-top: 3px;
@@ -57,7 +70,7 @@ button:hover {
 
 .clear {
     background-color: burlywood;
-    border: 2px solid brown;
+    border: 2px solid lightsalmon;
    
 }
 .mt-1{
@@ -70,21 +83,11 @@ button:hover {
     width: 200px;
 }
 
-
-.forecastDashboard{
-    width: 200px;
-    margin: 40px;
-    display: inline;
-
-    
-    
-}
-
 .forecastList
 {
+
     display: flex;
-flex-direction: row; 
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
@@ -93,13 +96,24 @@ flex-direction: row;
     display: flex;
 }
 
-.container{
-    border: darkblue solid 15px;
 
-   
-}
 
 .one img{
-    display: flex;
+    display: inline;
     justify-content: flex-end;
+    float: right;
+    width: 990px;
+    height: 247px;
+    
+
+}
+#cityname{
+    background-color: salmon;
+
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+ 
 }

@@ -3,7 +3,7 @@ $(".boxEl").hide();
 $(".forecastDashboard").hide();
 var forecastdisplay;
 
-//Pulls previous city searches from local storage.
+//this function retrieves the previoussearches from the local storage.
 function allStorage() {
     var values = [],
         keys = Object.keys(localStorage),
@@ -17,13 +17,13 @@ function allStorage() {
 }
 allStorage();
 
-//Clears all local storage items and previous searches from the page.
+//Clears all items from the local storage and its previous searches
 $(".clear").on("click", function() {
     localStorage.clear();
     $(".prev-city").remove();
 });
 
-//This function collects all the info from the weather APIs to display on the page
+//Function to collect info from the weather apis
 $(".search").on("click", function() {
     var subject = $(".subject").val();
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + subject + "&appid=3c34658c8e0e9fdb71064b81293a3704";
@@ -35,7 +35,7 @@ $(".search").on("click", function() {
         forecastdisplay = false;
     }
 
-//This first ajax request collects current weather data and converts info into what we want to display.
+//This collection of current weather data and converts info into what is displayed.
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -60,8 +60,8 @@ $(".search").on("click", function() {
         $(".current-temp").text("Temperature: " + currentTemp.toFixed(1) + " °F");
         $(".current-hum").text("Humidity: " + response.main.humidity + "%");
         $(".current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
-        queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=3c34658c8e0e9fdb71064b81293a3704&lat=" + lat + "&lon=" + lon;
-//This is nested ajax request that gets the UV index but uses longitude and latitude from the previous ajax request to do so.
+
+        queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast/daily?&appid=3c34658c8e0e9fdb71064b81293a3704&lat=" + lat + "&lon=" + lon;
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -70,7 +70,7 @@ $(".search").on("click", function() {
         })
     })
 
-//This ajax request collects weather data for the next 5 days (specifically it is grabbing the stays from noon, as opposed to every few hours)
+//The collection of weather data for the 5 day forecast days (specifically it is grabbing the stays from noon, as opposed to every few hours)
     $.ajax({
         url: queryURL2,
         method: "GET"
